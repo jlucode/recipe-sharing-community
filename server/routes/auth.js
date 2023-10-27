@@ -1,6 +1,6 @@
 const express = require("express");
 const authRoutes = express.Router();
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dbo = require("../db/conn");
 
@@ -20,7 +20,7 @@ authRoutes.route("/users").get(async (req, res) => {
 authRoutes.post("/register", async (req, res) => {
   try {
     const { firstname, lastname, username, password, email } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcryptjs.hash(password, 10);
 
     const db_connect = dbo.getDb();
     const existingUser = await db_connect.collection("users").findOne({ username });
@@ -60,7 +60,7 @@ authRoutes.post("/login", async (req, res) => {
       return res.status(401).json({ error: "Authentication failed" });
     }
 
-    const passwordMatch = await bcrypt.compare(password, user.password);
+    const passwordMatch = await bcryptjs.compare(password, user.password);
     if (!passwordMatch) {
       return res.status(401).json({ error: "Authentication failed" });
     }
