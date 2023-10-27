@@ -1,0 +1,25 @@
+.custom-button {
+  background-color: #FF5A5F;
+  color: white;
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000;
+  width: 6.5rem;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: background-color 0.1s, transform 0.1s;
+  border: none;
+  border-radius: 50%; 
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.custom-button:hover {
+  color: #FF5A5F;
+  background-color: white;
+  transform: scale(1.3);
+}

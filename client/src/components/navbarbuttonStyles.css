@@ -1,0 +1,48 @@
+.navbar-oval-button {
+    color: #FF5A5F;
+    z-index: 1000;
+    width: 6.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: background-color 0.1s, transform 0.1s;
+    border: none;
+  }
+  
+.navbar-oval-button.login,
+.navbar-oval-button.logout {
+  color: #FF5A5F;
+  position: absolute;
+  top: .5rem; 
+  right: 1%; 
+}
+
+.navbar-oval-button.recipe{
+  color: #FF5A5F;
+  top: .5rem; 
+  right: 94%; 
+}
+
+.navbar-oval-button:hover,
+.navbar-oval-button.login:hover,
+.navbar-oval-button.logout:hover,
+.navbar-oval-button.recipe:hover
+{
+  color: #FF5A5F;
+  z-index: 1000;
+  width: 6.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: background-color 0.1s, transform 0.1s;
+  border: none;
+  transform: scale(1.3);
+}
+
+.navbar-oval-button.clicked {
+  color: #FF5A5F !important;
+}

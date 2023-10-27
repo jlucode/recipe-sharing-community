@@ -1,0 +1,31 @@
+.modal-header {
+    background-color: #FF5A5F;
+    color: white;
+    border-bottom: none;
+  }
+  
+.modal-title {
+  font-size: 24px;
+}
+
+.modal-body {
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 10px 20px;
+  background-color: #FF5A5F;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.5);
+}

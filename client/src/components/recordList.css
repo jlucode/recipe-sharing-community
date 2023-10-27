@@ -1,0 +1,119 @@
+.container-style {
+  background-image: url(./recipebackground_viewrecord.png);
+  background-repeat: no-repeat;
+  background-position-x: -12vh;
+  background-position-y: -7vh;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 150vh;
+}
+  
+.michelin-card {
+  background-color: #2d2926;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+  
+.record-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+  
+.no-recipes {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #6C757D;
+}
+
+.recipe-image {
+  object-fit: cover;
+  border-radius: 15px;
+  width: 100%;
+  height: fit-content;
+}
+  
+.michelin-title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffffff; 
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+  
+.michelin-btn {
+  background-color: #2d2926; 
+  color: #ffffff; 
+  border: none;
+  border-radius: 0px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.michelin-button-disabled {
+  background-color: #AAAFB4;
+  color: #ffffff; 
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  cursor: not-allowed; 
+  transition: background-color 0.3s ease-in-out;
+}
+  
+.michelin-btn:hover {
+  background-color: #d9410f; 
+}
+
+.michelin-btn-secondary:hover {
+  background-color: #3b60f4; 
+}
+
+.custom-button-recordList {
+  background-color: #FF5A5F;
+  color: white;
+  position: fixed;
+  bottom: 20px; 
+  left: 20px; 
+  z-index: 1000;
+  width: 6.5rem;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: background-color 0.1s, transform 0.1s;
+  border: none;
+  border-radius: 50%; 
+  cursor: pointer;
+  border: 2px solid white;
+}
+  
+.custom-button-recordList:hover {
+  color: #FF5A5F;
+  background-color: white;
+  transform: scale(1.3);
+}
