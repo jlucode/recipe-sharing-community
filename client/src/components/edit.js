@@ -30,7 +30,7 @@ export default function Edit() {
   useEffect(() => {
     async function fetchData() {
       const id = params.id.toString();
-      const response = await fetch(`http://localhost:5000/record/`);
+      const response = await fetch(`https://recipe-sharing-community-api.up.railway.app/record`);
 
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -115,7 +115,7 @@ export default function Edit() {
     const token = localStorage.getItem("token");  
 
     // This will send a post request to update the data in the database.
-    await fetch(`http://localhost:5000/update/${params.id}`, {
+    await fetch(`https://recipe-sharing-community-api.up.railway.app/update/${params.id}`, {
       method: "POST",
       headers: {
           Authorization: `${token}`,
@@ -349,7 +349,7 @@ export default function Edit() {
         <div className="form-group">
         <label htmlFor="image" className="image-upload-label">
           <img
-            src={selectedThumbnail || (form.image ? `http://localhost:5000/uploads/${form.image}` : '')}
+            src={selectedThumbnail || (form.image ? `https://recipe-sharing-community-api.up.railway.app/uploads/${form.image}` : '')}
             alt="Recipe"
             className="image-preview"
           />

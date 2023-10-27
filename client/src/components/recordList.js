@@ -14,7 +14,7 @@ const Record = (props) => (
     <Card className="shadow p-4 mx-auto michelin-card">
     <div className="background-overlay"></div>
       <div className="text-center mb-3">
-        <Card.Img src={`http://localhost:5000/uploads/${props.record.image}`} alt="Recipe" className="recipe-image" />
+        <Card.Img src={`https://recipe-sharing-community-api.up.railway.app/uploads/${props.record.image}`} alt="Recipe" className="recipe-image" />
       </div>
       <div className="text-left mb-3">
         <Card.Title className="michelin-title">
@@ -81,7 +81,7 @@ export default function RecordList() {
   useEffect(() => {
     async function getRecords() {
       const id = params.id.toString();
-      const response = await fetch(`http://localhost:5000/record/`);
+      const response = await fetch(`https://recipe-sharing-community-api.up.railway.app/record/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -113,7 +113,7 @@ export default function RecordList() {
   // This method will delete a record
   async function deleteRecord(id) {
     try {
-      await fetch(`http://localhost:5000/${id}`, {
+      await fetch(`https://recipe-sharing-community-api.up.railway.app/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `${token}`,

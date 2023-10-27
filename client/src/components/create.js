@@ -85,7 +85,7 @@ export default function Create() {
     formData.append("author", form.author);
 
     try {
-      const response = await fetch("http://localhost:5000/record/add", {
+      const response = await fetch("https://recipe-sharing-community-api.up.railway.app/record/add", {
         method: "POST",
         headers: {
           Authorization: `${token}`,

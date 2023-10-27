@@ -38,7 +38,7 @@ const Record = ({ record, records, setRecords }) => {
       <Card className="record-card">
         <Link to={`/recipe/${record._id}`}>
           <div className="card-img-container">
-            <Card.Img src={`http://localhost:5000/uploads/${record.image}`} alt="Recipe" />
+            <Card.Img src={`https://recipe-sharing-community-api.up.railway.app/uploads/${record.image}`} alt="Recipe" />
           </div>
         </Link>
         <Card.Body>
@@ -88,7 +88,7 @@ export default function RecordList() {
   useEffect(() => {
     async function getRecords() {
       try {
-        const response = await fetch(`http://localhost:5000/record/`);
+        const response = await fetch(`https://recipe-sharing-community-api.up.railway.app/record/`);
 
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;

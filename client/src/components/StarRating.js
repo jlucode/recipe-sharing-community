@@ -31,7 +31,7 @@ const StarRating = ({ recordId, updateAverageRating }) => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/record/updateRating/${recordId}`, {
+      const response = await fetch(`https://recipe-sharing-community-api.up.railway.app/record/updateRating/${recordId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
